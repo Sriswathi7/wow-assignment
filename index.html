@@ -1,0 +1,114 @@
+<html>
+   <head>
+      <link rel="stylesheet" type="text/css" href="bootstrap.css">
+
+      <script>
+         function dis(val)
+         {
+             document.getElementById("result").value+=val
+         }
+         function res()
+         {
+             let A = document.getElementById("result").value
+             let B = eval(A)
+             document.getElementById("result").value = B
+         }
+         function clr()
+         {
+
+             document.getElementById("result").value = ""
+         }
+         function back()
+         {
+            var nu=result.value;
+            var len=nu.length-1;
+            var nu1=nu.substring(0,len);
+            result.value=nu1;
+         }
+      </script>
+      <style>
+         .title{
+         margin-bottom: 10px;
+         text-align:center;
+         width: 210px;
+         color:pink;
+         border: black 2px;
+         font-size: 20px;
+         background-color:grey;
+         }
+  
+         input[type="button"]
+         {
+         border: none;
+         width:100%;
+         font-size: 25px;
+         border-radius: 3px;
+         box-shadow: 0px 1px 4px -2px #333;
+         text-shadow: 0px -1px #333;
+         border:5px black;
+         
+         }
+         #nu
+         {
+            background:sky blue(#9E9E9E,#7D7D7D,#696969);
+         }         
+         input[type="text"]
+         {
+         background-color:pink;
+         border:blue2px;
+         width:100%;
+         padding: 15px;
+         text-align: right;
+         }
+         #boo
+         {
+
+            
+            background:url(https://thumbs.dreamstime.com/z/school-supplies-side-border-lined-paper-background-colorful-over-95537255.jpg );
+            background-size: cover;   
+         }
+      </style>
+    
+   </head>
+   
+   <body id="boo"><br><br><br><br><br><center>
+      <div class = title ><marquee>sriswathi's Calculator</marquee></div>
+      <table border=1 cellpadding="5" cellspacing="2">
+         <tr>
+            <td colspan=4><input type="text" class="btn btn-warning" id="result"/></td>
+         </tr>
+         <tr>
+            <td><input type="button"   class="btn btn-info" value="+" onclick="dis('+')"/> </td>
+            <td><input type="button"   class="btn btn-info" value="-" onclick="dis('-')"/> </td>
+            <td><input type="button"  class="btn btn-info" value="*" onclick="dis('*')"/> </td>
+            <td><input type="button"  class="btn btn-info" value="/" onclick="dis('/')"/> </td>
+         </tr>
+         <tr>
+            <td><input type="button" id="nu"  class="btn btn-secondary" value="7" onclick="dis('7')"/> </td>
+            <td><input type="button" id="nu"  class="btn btn-secondary" value="8" onclick="dis('8')"/> </td>
+            <td><input type="button" id="nu"  class="btn btn-secondary" value="9" onclick="dis('9')"/> </td>
+            <td rowspan="3" id="equ"><input type="button"  class="btn btn-primary"  style=" padding-top: 30px; padding-bottom: 30px;" value="=" onclick="res()"/></td>
+         </tr>
+         <tr>
+            <td><input type="button" id="nu" class="btn btn-secondary" value="4" onclick="dis('4')"/> </td>
+            <td><input type="button" id="nu" class="btn btn-secondary" value="5" onclick="dis('5')"/> </td>
+            <td><input type="button" id="nu" class="btn btn-secondary" value="6" onclick="dis('6')"/> </td>
+            
+         </tr>
+         <tr>
+            <td><input type="button" id="nu"  class="btn btn-secondary" value="1" onclick="dis('1')"/> </td>
+            <td><input type="button" id="nu"  class="btn btn-secondary" value="2" onclick="dis('2')"/> </td>
+            <td><input type="button" id="nu" class="btn btn-secondary" value="3" onclick="dis('3')"/> </td>
+         </tr>
+         
+         
+         <tr>
+            <td><input type="button" value="del"  class="btn btn-success" onclick="back()"/></td>
+            <td><input type="button" id="nu" class="btn btn-secondary" value="0" onclick="dis('0')"/> </td>
+            <td><input type="button" id="nu" class="btn btn-secondary" value="." onclick="dis('.')"/> </td>
+            <td><input type="button" id="nu" class="btn btn-danger" value="CLEAR" onclick="clr()"/> </td> 
+         </tr>
+      </table>
+   </center>
+   </body>
+</html>   
